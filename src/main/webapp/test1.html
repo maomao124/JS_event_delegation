@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<!--
+Project name(项目名称)：JS_event_delegation
+  File name(文件名): test1
+  Authors(作者）: mao
+  Author QQ：1296193245
+  GitHub：https://github.com/maomao124/
+  Date(创建日期)： 2022/3/20
+  Time(创建时间)： 20:59
+  Description(描述)： 无
+-->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="test1.css">
+</head>
+<body>
+<ul id="list">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+</ul>
+<script>
+    window.onload = function ()
+    {
+        var the_ul = document.getElementById('list');
+        var the_li = the_ul.getElementsByTagName('li');
+        for (var i = 0; i < the_li.length; i++)
+        {
+            the_li[i].onclick = function ()
+            {
+                console.log(this.innerHTML)
+            }
+        }
+    }
+</script>
+</body>
+</html>

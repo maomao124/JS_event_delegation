@@ -1,0 +1,24 @@
+/*
+  Project name(项目名称)：JS_event_delegation 
+  File name(文件名): test1
+  Author(作者）: mao
+  Author QQ：1296193245
+  GitHub：https://github.com/maomao124/
+  Date(创建日期)： 2022/3/20 
+  Time(创建时间)： 21:02
+  Version(版本): 1.0
+  Description(描述)： 无
+ */
+
+li {
+    width: 300px;
+    height: 50px;
+    background-color: deepskyblue;
+    border: #cbff50 solid 5px;
+    transition: all 2s linear 0.2s;
+}
+
+
+ul{
+
+}

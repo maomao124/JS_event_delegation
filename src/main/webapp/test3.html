@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<!--
+Project name(项目名称)：JS_event_delegation
+  File name(文件名): test3
+  Authors(作者）: mao
+  Author QQ：1296193245
+  GitHub：https://github.com/maomao124/
+  Date(创建日期)： 2022/3/20
+  Time(创建时间)： 21:07
+  Description(描述)： 无
+-->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="test1.css">
+</head>
+<body>
+<ul id="list">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+</ul>
+<button style="float:left;" id="addLi">添加一个li</button>
+<br>
+<br>
+<button style="float:left;" id="delLi">删除一个li</button>
+<script>
+    window.onload = function ()
+    {
+        var the_ul = document.getElementById('list');
+        var the_li = the_ul.getElementsByTagName('li');
+        var sum = the_li.length
+        the_ul.onclick = function (e)
+        {
+            console.log(e.target.innerHTML)
+        };
+        document.getElementById('addLi').onclick = function ()
+        {
+            var newli = document.createElement("li");
+            newli.innerHTML = ++sum;
+            the_ul.appendChild(newli);
+        };
+        document.getElementById('delLi').onclick = function ()
+        {
+            if (document.getElementsByTagName('li').length === 0)
+            {
+                alert("无法再删除");
+            }
+            else
+            {
+                the_ul.firstElementChild.remove();
+            }
+        };
+    }
+</script>
+</body>
+</html>
